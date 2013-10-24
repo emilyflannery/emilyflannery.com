@@ -1,0 +1,19 @@
+{
+	"name": "scrollScreen",
+	"version": "0.0.2",
+	"title": "Jquery Scroll Screen",
+	"description": "scrollScreen is a very simple plugin that scrolls the screen relative to an element.  Options include horizontal and vertical position and padding, animation speed, and easing.",
+	"author": {
+		"name" : "Byron Matus",
+		"email" : "byronmatus@gmail.com"
+	},
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "http://opensource.org/licenses/MIT"
+		}
+	],
+	"dependencies": {
+		"jquery": ">=1.5"
+    }
+}

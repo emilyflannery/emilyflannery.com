@@ -1,0 +1,432 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "fonts.scss";
+@import "isotope.scss";
+
+$black: #3D3D3D;
+$white: #FEFEFE;
+$grey: #B0AFB0;
+$blue: #9BBBC6;
+$coral: #F26C4E;
+$sans-light: "neuzeit-light", Helvetica, Arial, sans-serif;
+$title-light: 'Raleway', "neuzeit-light", sans-serif;
+$sans-bold: "neuzeit-bold", Heltica, Arial, sans-serif;
+$serif: "bodoni", "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+
+@mixin font-size($sizeValue) {
+	font-size: $sizeValue + px;
+	font-size: ($sizeValue / 10) + rem;
+}
+
+@mixin line-height($sizeValue) {
+	line-height: $sizeValue + px;
+	line-height: ($sizeValue / 10) + rem;
+}
+
+@mixin all-caps {
+    letter-spacing: .2em;
+    text-transform: uppercase;
+}
+
+.hide {
+	display: none;
+}
+
+html{
+	background: $white;
+	font-size: 65.2%;
+	height: 100%;
+}
+
+body {
+    width: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	color: $black;
+	font-family: $title-light;
+	letter-spacing: .1em;
+	line-height: 1.5em;
+	padding: 0 0 2em 0;
+	@include font-size(21);
+}
+
+h2 {
+	color: $coral;
+	font-family: $sans-bold;
+	letter-spacing: .1em;
+	line-height: 3em;
+	@include font-size(14);
+}
+
+h3 {
+	color: $white;
+	font-family: $serif;
+	font-size: 200%;
+	letter-spacing: .4em;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+h4 {
+	color: $white;
+	font-family: $sans-light;
+	font-size: 70%;
+	letter-spacing: .6em;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: lighter;
+}
+
+h6 {
+	color: $coral;
+	font-family: $sans-light;
+	letter-spacing: .3em;
+	line-height: 2em;
+	@include all-caps;
+	@include font-size(10.5);
+
+		a {
+		color: $grey;
+		}
+}
+				
+header {
+	background: $white;
+	border-top: 5px solid $black;
+	clear: both;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 9;
+	transition: all .2s;
+	-moz-transition: all .2s; /* Firefox 4 */
+	-webkit-transition: all .2s; /* Safari and Chrome */
+	-o-transition: all .2s; /* Opera */
+	@include font-size(11.2);
+		
+		h1 {
+		color: #231F20;
+		float: left;
+		font-family: $sans-light;
+		letter-spacing: .6em;
+		padding: 0 0 0 2em;
+		vertical-align: middle;
+		@include all-caps;
+			
+			#logo {
+			height: auto;
+			margin-right: 1em;
+			padding-top: 1.8em;
+			position: relative;
+			vertical-align: middle;
+			width: 260px;
+			z-index: 2;
+			transition: all .3s;
+			-moz-transition: all .3s; /* Firefox 4 */
+			-webkit-transition: all .3s; /* Safari and Chrome */
+			-o-transition: all .3s; /* Opera */
+
+			}
+			
+			#tag {
+			border-left: 1px solid $grey;
+			color: $black;
+			padding: .9em 0 .9em 2em;
+			@include font-size(11);
+			letter-spacing: .4em;
+			transition: all .3s;
+			-moz-transition: all .3s; /* Firefox 4 */
+			-webkit-transition: all .3s; /* Safari and Chrome */
+			-o-transition: all .3s; /* Opera */
+			}
+		}
+		
+		nav {
+		float: right;
+		font-family: $sans-bold;
+		padding: 2em 1.8em 0 0;
+		@include all-caps; 
+			
+			ul.primary {
+				li {
+				overflow: hidden;	
+				display: inline-block;
+				text-align: right;
+				padding: 1em 2em 4em 2em;
+					
+					a {
+					color: $black;
+					position: relative;		
+					}
+				
+					&:hover {
+					}
+			
+					ul.secondary { 
+					background: white;
+					border-top: 1px solid $grey;
+					display: none;
+					height: 3em;
+					margin: 1.5em 0 0 1.5%;
+					padding: 0.7em 0 0 0;
+					position: absolute;
+					left: 0;
+					width: 95%;
+					
+						&:before {
+						content: "";
+						position: absolute;
+						top: -.55em;
+						right: 12em;
+						-webkit-transform: rotate(-45deg); /* Safari */
+						-moz-transform: rotate(-45deg); /* Firefox */
+						-ms-transform: rotate(-45deg); /* IE */
+						-o-transform: rotate(-45deg); /* Opera */
+						filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3); /* Internet Explorer */
+						width:10px;
+						height:10px;
+						background-color: white;
+						border-top: 1px solid $grey;
+						border-right: 1px solid $grey;
+						border-bottom: 1px solid $white;
+						border-left: 1px solid $white;
+						transform: rotate(45deg);
+						z-index: 2;
+						}
+
+						&:before, &:after {
+						content: "";
+						position: absolute;
+						background: $white;  /* Match the background */
+						top: 0;
+						bottom: 0;
+						width: 9999px;   /* some huge width */
+						} 
+						&:before {
+						  right: 100%; 
+						}
+						&:after {
+						  left: 100%;
+						}
+							
+						li { /* secondary item */
+						text-align: right;
+						margin-right: -2.5em;
+					
+							a {
+							color: $grey;
+							font-family: $sans-light;
+							@include font-size(10.3);
+							letter-spacing: .1em;
+							padding: .2em .5em;
+							transition: all .2s ease-in-out;
+							-moz-transition: all .2s ease-in-out; /* Firefox 4 */
+							-webkit-transition: all .2s ease-in-out; /* Safari and Chrome */
+							-o-transition: all .2s ease-in-out; /* Opera */ 
+			
+								&:hover {
+								color: $coral;
+								}
+						
+							}
+					
+							&:hover > section {
+							display: block;
+							}
+						}
+			
+						ul.tertiary { /* tertiary */
+						background: white;
+						display: none;
+						margin: 0;
+						padding: 1em .1em 0 0;
+						position: absolute;
+						left: 0;
+						width: 100%;
+
+							li {
+							letter-spacing: .3em;
+							margin: 0 -1em 0 0;
+							padding: .1em .4em;
+										
+								a {
+								color: $black;
+								@include font-size(9.9);
+								
+									&:hover {
+									color: $coral;
+									}
+								}
+							}
+							
+							&:before, &:after {
+							content: "";
+							position: absolute;
+							background: $white;  /* Match the background */
+							top: 0;
+							bottom: 0;
+							width: 9999px;   /* some huge width */
+							} 
+							&:before {
+							  right: 100%; 
+							}
+							&:after {
+							  left: 100%;
+							}
+
+						} /* tertiary */
+					} /* secondary */			
+				} /* primary li */				
+			} /* primary */
+		} /* nav */ 
+} /* header */
+
+header.expand {
+	padding-top: 10em;
+}
+
+header.shrink {
+	padding-top: 5em;
+
+	#logo {
+	padding-top: 1.5em;
+	width: 200px;
+	}
+
+	#tag {
+	@include font-size(10);
+	}
+}
+
+.active {
+	color: $coral;
+	position: relative;
+
+	&:before {
+	content: "x";
+	color: $black;
+	position: absolute;
+	top: .3em;
+	left: -.8em;
+	}
+}
+
+#social {
+	background-color: #3D3D3D; 
+	margin: 0 2em 0 0;
+	padding: .1em .4em .1em .4em; 
+	position: fixed;
+	top: .5em;
+	right: 2.5em;
+	z-index: 10;
+	width: 2em; 
+		a {
+		background-color: #FFF; 
+		border-radius: 20px; -moz-border-radius: 20px; 
+		display: block; 
+		height: 20px; 
+		margin: 5px auto; 
+		width: 20px;
+		z-index: 0;
+		transition: all .2s ease-in-out;
+		-moz-transition: all .2s ease-in-out; /* Firefox 4 */
+		-webkit-transition: all .2s ease-in-out; /* Safari and Chrome */
+		-o-transition: all .2s ease-in-out; /* Opera */
+			&:hover {
+			background-color: $blue;
+			}
+		}
+		img {
+		display: block; 
+		height: auto; 
+		text-align: center; 
+		vertical-align: middle;
+		width: 20px;
+		}
+}
+
+#work-container {
+	margin: 26em auto 0 auto;
+	text-align: center;
+	position: relative;
+	white-space: nowrap;
+	z-index: 0;
+		.item {
+		display: inline-block;
+		margin:10px;
+		position: relative;
+			img {
+			height: 100%;
+			width: auto;
+			}
+				.description {
+				background-color: rgba(0,0,0,0);
+				display: block;
+				height: 100%;
+				position: absolute; 
+				top: 0;		
+				visibility: hidden;		
+				width: 100%;
+				transition: all .2s ease-in-out;
+				-moz-transition: all .2s ease-in-out; /* Firefox 4 */
+				-webkit-transition: all .2s ease-in-out; /* Safari and Chrome */
+				-o-transition: all .2s ease-in-out; /* Opera */
+					a {
+					display: block;
+					margin: 0 auto;
+					position: relative;
+					top: 38%;
+							h3 {
+							border-bottom: 1px solid $white;
+							margin-bottom: 20px;
+							padding: 15px;
+							display: inline-block;
+							}
+					}
+				}
+			&:hover .description {
+			background-color: rgba(20,20,20,0.8);
+			display: block;
+			visibility: visible;
+			}
+		}
+}
+
+
+#content-container {
+	display: block;
+	margin: 23em auto 0 auto;
+	padding-bottom: 3em;
+	text-align: left;
+	width: 92%;
+
+		#content {
+		display: inline-block;
+		margin-right: 4%;
+		width: 78%;
+		}
+		
+		#tags {
+		display: inline-block;
+		margin-top: 4.5em;
+		position: fixed;
+		text-align: right;
+		vertical-align: top;
+		width: 15%;
+		}
+}
+
+@media only screen 
+and (max-width : 1020px) {
+	
+
+}

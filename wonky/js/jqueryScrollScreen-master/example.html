@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://ibrius.com/js/scrollScreen.min.js"></script>
+</head>
+<style>
+.go_to {
+   position:absolute;
+   display:inline-block;
+   padding:5px;
+   color:#666;
+   text-align:center;
+   cursor:pointer;
+   background:#fbfbfb;
+   border:1px solid #eee;
+}
+</style>
+<body>
+
+<div id="background" style="height:10000px; width:10000px; position:relative;">
+   <div id="off_screen_4" style="height:150px; width:150px; background-color:purple; position:absolute; top:150px; left:100px;"> </div>
+   <div class="go_to" data-go-to="1" data-h-pos="center" data-v-pos="middle" style="top:100px; left:100px;">Go to next div. Options:{default}</div>
+   
+   <div id="off_screen_1" style="height:100px; width:500px; background-color:blue; position:absolute; top:300px; left:2000px;"> </div>
+   <div class="go_to" data-go-to="2" data-h-pos="right" data-v-pos="top" style="top:410px; left:2000px;">Go to next div. Options:{vertical_position:top, horizontal_position:right}</div>
+   
+   <div id="off_screen_2" style="height:200px; width:100px; background-color:red; position:absolute; top:2000px; left:1800px;"> </div>
+   <div class="go_to" data-go-to="3" data-h-pos="left" data-padding="50" data-v-pos="top" style="top:2210px; left:1360px;">Go to next div. Options:{vertical_position:top, horizontal_position:left, left_padding:50}</div>
+   
+   <div id="off_screen_3" style="height:200px; width:200px; border:12px solid green; border-radius:8px; background-color:green; position:absolute; top:5000px; left:3800px;"> </div>
+   <div class="go_to" data-go-to="4" data-h-pos="center" data-v-pos="middle" style="top:5230px; left:3800px;">Go back to start.</div>
+</div>
+
+<script>
+   $('.go_to').click( function() {
+      $('#off_screen_'+$(this).attr('data-go-to')).scrollScreen({ 'speed' : 'slow', 'horizontal_position':$(this).attr('data-h-pos'), 'vertical_position':$(this).attr('data-v-pos'), 'left_padding':$(this).attr('data-padding') });
+   });
+</script>
+
+</body>
+</html>

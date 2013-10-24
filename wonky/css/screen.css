@@ -1,0 +1,110 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:100);
+/* Welcome to Compass. In this file you should write your main styles. (or centralize your imports) Import this file using the following HTML or equivalent: <link href="/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font: inherit; font-size: 100%; vertical-align: baseline; }
+
+html { line-height: 1; }
+
+ol, ul { list-style: none; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+caption, th, td { text-align: left; font-weight: normal; vertical-align: middle; }
+
+q, blockquote { quotes: none; }
+q:before, q:after, blockquote:before, blockquote:after { content: ""; content: none; }
+
+a img { border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary { display: block; }
+
+@font-face { font-family: "neuzeit-light"; src: url("../fonts/neuzeit/neuzeit-light.ttf") format("truetype"), url("../fonts/neuzeit/neuzeit-light.otf") format("opentype"), url("../fonts/neuzeit/neuzeit-light.woff") format("woff"), url("../fonts/neuzeit/neuzeit-light.eot") format("embedded-opentype"); }
+
+@font-face { font-family: "neuzeit-bold"; src: url("../fonts/neuzeit/neuzeit-bold.ttf") format("truetype"), url("../fonts/neuzeit/neuzeit-bold.otf") format("opentype"), url("../fonts/neuzeit/neuzeit-bold.woff") format("woff"), url("../fonts/neuzeit/neuzeit-bold.eot") format("embedded-opentype"); }
+
+@font-face { font-family: "bodoni"; src: url("../fonts/bodoni/bodoni.ttf") format("truetype"), url("../fonts/bodoni/bodoni.otf") format("opentype"), url("../fonts/bodoni/bodoni.woff") format("woff"), url("../fonts/bodoni/bodoni.eot") format("embedded-opentype"); }
+
+/**** Isotope Filtering ****/
+.isotope-item { z-index: 2; }
+
+.isotope-hidden.isotope-item { pointer-events: none; z-index: 1; }
+
+/**** Isotope CSS3 transitions ****/
+.isotope, .isotope .isotope-item { -webkit-transition-duration: 0.8s; -moz-transition-duration: 0.8s; -ms-transition-duration: 0.8s; -o-transition-duration: 0.8s; transition-duration: 0.8s; }
+
+.isotope { -webkit-transition-property: height, width; -moz-transition-property: height, width; -ms-transition-property: height, width; -o-transition-property: height, width; transition-property: height, width; }
+
+.isotope .isotope-item { -webkit-transition-property: -webkit-transform, opacity; -moz-transition-property: -moz-transform, opacity; -ms-transition-property: -ms-transform, opacity; -o-transition-property: -o-transform, opacity; transition-property: transform, opacity; }
+
+/**** disabling Isotope CSS3 transitions ****/
+.isotope.no-transition, .isotope.no-transition .isotope-item, .isotope .isotope-item.no-transition { -webkit-transition-duration: 0s; -moz-transition-duration: 0s; -ms-transition-duration: 0s; -o-transition-duration: 0s; transition-duration: 0s; }
+
+.hide { display: none; }
+
+html { background: #fefefe; font-size: 65.2%; height: 100%; }
+
+body { width: 100%; }
+
+a { text-decoration: none; }
+
+p { color: #3d3d3d; font-family: "Raleway", "neuzeit-light", sans-serif; letter-spacing: .1em; line-height: 1.5em; padding: 0 0 2em 0; font-size: 21px; font-size: 2.1rem; }
+
+h2 { color: #f26c4e; font-family: "neuzeit-bold", Heltica, Arial, sans-serif; letter-spacing: .1em; line-height: 3em; font-size: 14px; font-size: 1.4rem; }
+
+h3 { color: #fefefe; font-family: "bodoni", "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif; font-size: 200%; letter-spacing: .4em; text-decoration: none; text-transform: uppercase; }
+
+h4 { color: #fefefe; font-family: "neuzeit-light", Helvetica, Arial, sans-serif; font-size: 70%; letter-spacing: .6em; text-decoration: none; text-transform: uppercase; font-weight: lighter; }
+
+h6 { color: #f26c4e; font-family: "neuzeit-light", Helvetica, Arial, sans-serif; letter-spacing: .3em; line-height: 2em; letter-spacing: .2em; text-transform: uppercase; font-size: 10.5px; font-size: 1.05rem; }
+h6 a { color: #b0afb0; }
+
+header { background: #fefefe; border-top: 5px solid #3d3d3d; clear: both; position: fixed; top: 0; width: 100%; z-index: 9; transition: all 0.2s; -moz-transition: all 0.2s; /* Firefox 4 */ -webkit-transition: all 0.2s; /* Safari and Chrome */ -o-transition: all 0.2s; /* Opera */ font-size: 11.2px; font-size: 1.12rem; /* nav */ }
+header h1 { color: #231F20; float: left; font-family: "neuzeit-light", Helvetica, Arial, sans-serif; letter-spacing: .6em; padding: 0 0 0 2em; vertical-align: middle; letter-spacing: .2em; text-transform: uppercase; }
+header h1 #logo { height: auto; margin-right: 1em; padding-top: 1.8em; position: relative; vertical-align: middle; width: 260px; z-index: 2; transition: all 0.3s; -moz-transition: all 0.3s; /* Firefox 4 */ -webkit-transition: all 0.3s; /* Safari and Chrome */ -o-transition: all 0.3s; /* Opera */ }
+header h1 #tag { border-left: 1px solid #b0afb0; color: #3d3d3d; padding: 0.9em 0 0.9em 2em; font-size: 11px; font-size: 1.1rem; letter-spacing: .4em; transition: all 0.3s; -moz-transition: all 0.3s; /* Firefox 4 */ -webkit-transition: all 0.3s; /* Safari and Chrome */ -o-transition: all 0.3s; /* Opera */ }
+header nav { float: right; font-family: "neuzeit-bold", Heltica, Arial, sans-serif; padding: 2em 1.8em 0 0; letter-spacing: .2em; text-transform: uppercase; /* primary */ }
+header nav ul.primary { /* primary li */ }
+header nav ul.primary li { overflow: hidden; display: inline-block; text-align: right; padding: 1em 2em 4em 2em; /* secondary */ }
+header nav ul.primary li a { color: #3d3d3d; position: relative; }
+header nav ul.primary li ul.secondary { background: white; border-top: 1px solid #b0afb0; display: none; height: 3em; margin: 1.5em 0 0 1.5%; padding: 0.7em 0 0 0; position: absolute; left: 0; width: 95%; /* tertiary */ }
+header nav ul.primary li ul.secondary:before { content: ""; position: absolute; top: -.55em; right: 12em; -webkit-transform: rotate(-45deg); /* Safari */ -moz-transform: rotate(-45deg); /* Firefox */ -ms-transform: rotate(-45deg); /* IE */ -o-transform: rotate(-45deg); /* Opera */ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3); /* Internet Explorer */ width: 10px; height: 10px; background-color: white; border-top: 1px solid #b0afb0; border-right: 1px solid #b0afb0; border-bottom: 1px solid #fefefe; border-left: 1px solid #fefefe; transform: rotate(45deg); z-index: 2; }
+header nav ul.primary li ul.secondary:before, header nav ul.primary li ul.secondary:after { content: ""; position: absolute; background: #fefefe; /* Match the background */ top: 0; bottom: 0; width: 9999px; /* some huge width */ }
+header nav ul.primary li ul.secondary:before { right: 100%; }
+header nav ul.primary li ul.secondary:after { left: 100%; }
+header nav ul.primary li ul.secondary li { /* secondary item */ text-align: right; margin-right: -2.5em; }
+header nav ul.primary li ul.secondary li a { color: #b0afb0; font-family: "neuzeit-light", Helvetica, Arial, sans-serif; font-size: 10.3px; font-size: 1.03rem; letter-spacing: .1em; padding: 0.2em 0.5em; transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; /* Firefox 4 */ -webkit-transition: all 0.2s ease-in-out; /* Safari and Chrome */ -o-transition: all 0.2s ease-in-out; /* Opera */ }
+header nav ul.primary li ul.secondary li a:hover { color: #f26c4e; }
+header nav ul.primary li ul.secondary li:hover > section { display: block; }
+header nav ul.primary li ul.secondary ul.tertiary { /* tertiary */ background: white; display: none; margin: 0; padding: 1em 0.1em 0 0; position: absolute; left: 0; width: 100%; }
+header nav ul.primary li ul.secondary ul.tertiary li { letter-spacing: .3em; margin: 0 -1em 0 0; padding: 0.1em 0.4em; }
+header nav ul.primary li ul.secondary ul.tertiary li a { color: #3d3d3d; font-size: 9.9px; font-size: 0.99rem; }
+header nav ul.primary li ul.secondary ul.tertiary li a:hover { color: #f26c4e; }
+header nav ul.primary li ul.secondary ul.tertiary:before, header nav ul.primary li ul.secondary ul.tertiary:after { content: ""; position: absolute; background: #fefefe; /* Match the background */ top: 0; bottom: 0; width: 9999px; /* some huge width */ }
+header nav ul.primary li ul.secondary ul.tertiary:before { right: 100%; }
+header nav ul.primary li ul.secondary ul.tertiary:after { left: 100%; }
+
+/* header */
+header.expand { padding-top: 10em; }
+
+header.shrink { padding-top: 5em; }
+header.shrink #logo { padding-top: 1.5em; width: 200px; }
+header.shrink #tag { font-size: 10px; font-size: 1rem; }
+
+.active { color: #f26c4e; position: relative; }
+.active:before { content: "x"; color: #3d3d3d; position: absolute; top: .3em; left: -.8em; }
+
+#social { background-color: #3D3D3D; margin: 0 2em 0 0; padding: 0.1em 0.4em 0.1em 0.4em; position: fixed; top: .5em; right: 2.5em; z-index: 10; width: 2em; }
+#social a { background-color: #FFF; border-radius: 20px; -moz-border-radius: 20px; display: block; height: 20px; margin: 5px auto; width: 20px; z-index: 0; transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; /* Firefox 4 */ -webkit-transition: all 0.2s ease-in-out; /* Safari and Chrome */ -o-transition: all 0.2s ease-in-out; /* Opera */ }
+#social a:hover { background-color: #9bbbc6; }
+#social img { display: block; height: auto; text-align: center; vertical-align: middle; width: 20px; }
+
+#work-container { margin: 26em auto 0 auto; text-align: center; position: relative; white-space: nowrap; z-index: 0; }
+#work-container .item { display: inline-block; margin: 10px; position: relative; }
+#work-container .item img { height: 100%; width: auto; }
+#work-container .item .description { background-color: rgba(0, 0, 0, 0); display: block; height: 100%; position: absolute; top: 0; visibility: hidden; width: 100%; transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; /* Firefox 4 */ -webkit-transition: all 0.2s ease-in-out; /* Safari and Chrome */ -o-transition: all 0.2s ease-in-out; /* Opera */ }
+#work-container .item .description a { display: block; margin: 0 auto; position: relative; top: 38%; }
+#work-container .item .description a h3 { border-bottom: 1px solid #fefefe; margin-bottom: 20px; padding: 15px; display: inline-block; }
+#work-container .item:hover .description { background-color: rgba(20, 20, 20, 0.8); display: block; visibility: visible; }
+
+#content-container { display: block; margin: 23em auto 0 auto; padding-bottom: 3em; text-align: left; width: 92%; }
+#content-container #content { display: inline-block; margin-right: 4%; width: 78%; }
+#content-container #tags { display: inline-block; margin-top: 4.5em; position: fixed; text-align: right; vertical-align: top; width: 15%; }
