@@ -69,7 +69,7 @@ $(document).ready(function() {
 		e.stopPropagation();
 	});
 
-	$('header').click(function() {
+	$("header").click(function() {
 		$digital_list.slideUp(200),
 		$cat_digital.removeClass("active");
 	});
@@ -87,11 +87,8 @@ $(document).ready(function() {
 
 	});
 
-	$cat_branding.click(function(e) {
-		e.stopPropagation();
-	});
 
-	$('header').click(function() {
+	$("header").click(function() {
 		$branding_list.slideUp(200);
 		$cat_branding.removeClass("active");
 	});
@@ -124,56 +121,62 @@ $(document).ready(function() {
 
 
 	// PRVENT DEFAULT ON CLICK TO KEEP MENUS OPEN 
-	$(".primary #work li").click(function(e) {
+	/*$(".primary #work > li").click(function(e) {
 		e.preventDefault();
 	});
 
-	$(".primary #work li a").click(function(e) {
+	$(".primary #work > li > a").click(function(e) {
 		e.preventDefault();
-	});
+	});*/
 
 
 
 	//////////////////////////////////// AJAX LOAD /////////////////////////////////////  
 
-	var hash = window.location.hash.substr(1);
-	var href = $('.tertiary li a').each(function(){
-		var href = $(this).attr('href');
-		if(hash==href.substr(0,href.length-5)){
-			var toLoad = hash+'.html #main';
-			$('#main').load(toLoad)
-		}											
-	});
-
-	$('tertiary li a').click(function(){
-								  
-		var toLoad = $(this).attr('href')+' #main';
-		$('#main').hide('fast',loadContent);
-		$('#load').remove();
-		$('#wrapper').append('<span id="load">LOADING...</span>');
-		$('#load').fadeIn('normal');
-		window.location.hash = $(this).attr('href').substr(0,$(this).attr('href').length-5);
-		function loadContent() {
-			$('#main').load(toLoad,'',showNewContent())
-		}
-		function showNewContent() {
-			$('#main').show('normal',hideLoader());
-		}
-		function hideLoader() {
-			$('#load').fadeOut('normal');
-		}
-		return false;
-		
-	});
+	 // Check for hash value in URL  
+    var hash = window.location.hash.substr(1);  
+    var href = $('.tertiary li a').each(function(){  
+        var href = $(this).attr('href');  
+        if(hash==href.substr(0,href.length-5)){  
+            var toLoad = hash+'.html #main';  
+            $('#main').load(toLoad)  
+        }   
+    });  
+      
+    $('#nav li a').click(function(){  
+      
+    var toLoad = $(this).attr('href')+' #main';  
+    $('#main').hide('fast',loadContent);  
+    $('#load').remove();  
+    $('#wrapper').append('<span id="load">LOADING...</span>');  
+    $('#load').fadeIn('normal');  
+    window.location.hash = $(this).attr('href').substr(0,$(this).attr('href').length-5);  
+    function loadContent() {  
+        $('#main').load(toLoad,'',showNewContent())  
+    }  
+    function showNewContent() {  
+        $('#main').show('normal',hideLoader());  
+    }  
+    function hideLoader() {  
+        $('#load').fadeOut('normal');  
+    }  
+    return false;  
+      
+    });  
 
 	////////////////////////////////// ACTIVE NAV ITEM ///////////////////////////////////  
 
-	$(function() {
-  		$('nav a[href^="/' + location.pathname.split("/")[1] + '"]').addClass('active');
+	$(function(){
+       $("a").each(function(){
+               if ($(this).attr("href") == window.location.pathname){
+                       $(this).addClass("active");
+               }
+       });
 	});
 
 
 	////////////////////////////////// PREV/NEXT WORK ///////////////////////////////////  
+
 
 
 });  // eod
