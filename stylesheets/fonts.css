@@ -1,0 +1,15 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:100);
+@font-face {
+  font-family: "neuzeit-light";
+  src: url("../fonts/neuzeit/neuzeit-light.ttf") format("truetype"), url("../fonts/neuzeit/neuzeit-light.otf") format("opentype"), url("../fonts/neuzeit/neuzeit-light.woff") format("woff"), url("../fonts/neuzeit/neuzeit-light.eot") format("embedded-opentype");
+}
+
+@font-face {
+  font-family: "neuzeit-bold";
+  src: url("../fonts/neuzeit/neuzeit-bold.ttf") format("truetype"), url("../fonts/neuzeit/neuzeit-bold.otf") format("opentype"), url("../fonts/neuzeit/neuzeit-bold.woff") format("woff"), url("../fonts/neuzeit/neuzeit-bold.eot") format("embedded-opentype");
+}
+
+@font-face {
+  font-family: "bodoni";
+  src: url("../fonts/bodoni/bodoni.ttf") format("truetype"), url("../fonts/bodoni/bodoni.otf") format("opentype"), url("../fonts/bodoni/bodoni.woff") format("woff"), url("../fonts/bodoni/bodoni.eot") format("embedded-opentype");
+}

@@ -43,6 +43,8 @@ GLOBAL
 -------------------------------------------------------------------------------------------------------*/
 .hide { display: none; }
 
+.show { display: block; }
+
 html { background: #fefefe; font-size: 65.2%; height: 100%; }
 
 body { width: 100%; }
@@ -59,7 +61,7 @@ h3 { color: #fefefe; font-family: "neuzeit-bold", Heltica, Arial, sans-serif; fo
 
 h4 { color: #fefefe; font-family: "neuzeit-light", Helvetica, Arial, sans-serif; font-size: 70%; letter-spacing: .6em; text-decoration: none; letter-spacing: .2em; text-transform: uppercase; font-weight: lighter; }
 
-h5 { color: #f26c4e; font-family: "neuzeit-bold", Heltica, Arial, sans-serif; letter-spacing: .2em; line-height: 2em; padding-bottom: .3em; text-transform: uppercase; font-size: 12px; font-size: 1.2rem; }
+h5 { color: #f26c4e; font-family: "neuzeit-light", Helvetica, Arial, sans-serif; letter-spacing: .2em; line-height: 2em; padding-bottom: .3em; text-transform: uppercase; font-size: 14px; font-size: 1.4rem; }
 h5 a:link, h5 a:visited { color: #f26c4e; }
 h5 em { color: #9bbbc6; }
 
@@ -88,7 +90,7 @@ header nav ul.primary li ul.secondary li a { color: #b0afb0; background: url("/i
 header nav ul.primary li ul.secondary li a:hover { color: #f26c4e; }
 header nav ul.primary li ul.secondary li a.active { background: none; background: url("/images/icon-active.png") 0 0 no-repeat; color: #f26c4e !important; position: relative; }
 header nav ul.primary li ul.secondary li:hover > section { display: block; }
-header nav ul.primary li ul.secondary ul.tertiary { /* tertiary */ background: white; display: none; margin: 0; padding: 1em 0.1em 0 0; position: absolute; left: 0; width: 100%; }
+header nav ul.primary li ul.secondary ul.tertiary { /* tertiary */ background: white; display: none; margin: 0; padding: 1em 0.1em 0.5em 0; position: absolute; left: 0; width: 100%; }
 header nav ul.primary li ul.secondary ul.tertiary li { letter-spacing: .3em; margin: 0 -1em 0 0; padding: 0.1em 0.4em; }
 header nav ul.primary li ul.secondary ul.tertiary li a:link, header nav ul.primary li ul.secondary ul.tertiary li a:visited { background: none; color: #3d3d3d; font-size: 9.9px; font-size: 0.99rem; }
 header nav ul.primary li ul.secondary ul.tertiary li a:hover, header nav ul.primary li ul.secondary ul.tertiary li a:active { color: #f26c4e; }
@@ -114,8 +116,8 @@ MAIN
 #main { margin: 28em 0 3em 0; }
 #main #content-container { display: block; margin: 0 auto 0 auto; text-align: left; width: 92%; }
 #main #content-container #content { display: inline-block; margin-right: 4%; width: 75%; }
-#main #content-container #content .prev { background: url("/images/prev-next.png") 5px 0 no-repeat; display: inline-block; margin: 0 0 -3px 10px; height: 22px; width: 25px; }
-#main #content-container #content .next { background: url("/images/prev-next.png") -15px 0 no-repeat; display: inline-block; margin: 0 0 -3px 0; height: 22px; width: 25px; }
+#main #content-container #content .prev-button { background: url("/images/prev-next.png") 5px 0 no-repeat; display: inline-block; margin: 0 0 -3px 10px; height: 22px; width: 25px; }
+#main #content-container #content .next-button { background: url("/images/prev-next.png") -15px 0 no-repeat; display: inline-block; margin: 0 0 -3px 0; height: 22px; width: 25px; }
 #main #content-container #tags { display: inline-block; margin-top: 4em; text-align: right; vertical-align: top; width: 20%; }
 #main #content-container #tags h6:after { content: ""; background: url("/images/icon-role.png") 0 4px no-repeat; color: #f26c4e; display: inline-block; margin-left: 6px; height: 13px; width: 10px; }
 #main #work-container { margin: 0 auto 0 auto; text-align: center; overflow: scroll; position: relative; white-space: nowrap; z-index: 0; }
@@ -140,3 +142,23 @@ FORM
 #main.contact #content-container #content form .submit { background-color: #9bbbc6; border: none; border-radius: 100px; color: #fefefe; margin: 0 auto; padding: 3em 0 2.8em 0; width: 7em; letter-spacing: .2em; text-transform: uppercase; font-size: 14px; font-size: 1.4rem; }
 #main.contact #content-container #content form .submit:hover { background-color: #f26c4e; }
 #main.contact #content-container #tags { width: 25%; }
+
+#main.about h2 { color: #f26c4e; }
+#main.about .testimonial p { padding: 0 0 0.5em 0; }
+#main.about .testimonial h6 { padding: 0 0 2em 0; }
+
+@media only screen and (min-width: 925px) { /* tablets and desktop */ }
+@media only screen and (max-width: 924px) { header.expand { padding-top: 7em; }
+  header { border-top: 5px solid #3d3d3d; position: inherit; overflow-x: hidden; width: 100%; }
+  header h1 { float: none; padding: 0; text-align: center; }
+  header h1 #logo { margin-right: 0; }
+  header h1 #tag { border-left: none; display: block; padding: 0.9em 0; }
+  header nav { float: none; padding: 3em 0; text-align: center; }
+  header nav ul.primary li ul.secondary { margin-left: 2.5%; text-align: center; }
+  header nav ul.primary li ul.secondary li .tertiary { display: none; text-align: center; }
+  #social { top: auto; bottom: 0; right: auto; text-align: center; width: 100%; }
+  #social a { display: inline-block; margin: 5px 3px; }
+  #main { margin-top: 3em; }
+  #work-container { padding-bottom: 6em; } }
+@media only screen and (max-width: 767px) { nav ul.primary li ul.secondary { left: 2.5%; }
+  #main { margin-top: 2em; } }

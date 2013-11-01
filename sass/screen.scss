@@ -40,6 +40,10 @@ GLOBAL
 	display: none;
 }
 
+.show {
+	display: block;
+}
+
 html{
 	background: $white;
 	font-size: 65.2%;
@@ -102,12 +106,12 @@ h4 {
 
 h5 {
 	color: $coral;
-	font-family: $sans-bold;
+	font-family: $sans-light;
 	letter-spacing: .2em;
 	line-height: 2em;
 	padding-bottom: .3em;
 	text-transform: uppercase;
-	@include font-size(12);
+	@include font-size(14);
 
 		a:link,
 		a:visited {
@@ -289,8 +293,6 @@ header {
 							background: url('/images/icon-active.png') 0 0 no-repeat;
 							color: $coral !important;
 							position: relative;
-							
-								
 							}
 					
 							&:hover > section {
@@ -302,7 +304,7 @@ header {
 						background: white;
 						display: none;
 						margin: 0;
-						padding: 1em .1em 0 0;
+						padding: 1em .1em .5em 0;
 						position: absolute;
 						left: 0;
 						width: 100%;
@@ -416,7 +418,7 @@ MAIN
 			margin-right: 4%;
 			width: 75%;
 			
-				.prev {
+				.prev-button {
 				background: url('/images/prev-next.png') 5px 0 no-repeat;
 				display: inline-block; 
 				margin: 0 0 -3px 10px;
@@ -424,7 +426,7 @@ MAIN
 				width: 25px;
 				}
 
-				.next {
+				.next-button {
 				background: url('/images/prev-next.png') -15px 0 no-repeat;
 				display: inline-block;
 				margin: 0 0 -3px 0;
@@ -589,13 +591,140 @@ FORM
 		#tags {
 		width: 25%;
 		}
+	}
+}
+
+#main.about {
+	h2 {
+	color: $coral;
+	}
+
+	.testimonial {
+	
+		p {
+		padding: 0 0 .5em 0;
 		}
+
+		h6 {
+		padding: 0 0 2em 0;
+		}
+	}
 }
 
 
 
 @media only screen 
-and (max-width : 1020px) {
-	
+and (min-width : 1020px) {
 
+}
+
+@media only screen 
+and (min-width: 925px) {
+    /* tablets and desktop */
+}
+
+@media only screen 
+and (max-width: 924px) {
+    
+    header.expand {
+    padding-top: 7em;
+    }
+
+    header {
+	border-top: 5px solid $black;
+	position: inherit;
+	overflow-x: hidden;
+	width: 100%;
+    	
+
+		h1 {
+		float: none;
+		padding: 0;
+		text-align: center;
+
+			#logo {
+			margin-right: 0;
+			}
+		
+			#tag {
+			border-left: none;
+			display: block;
+			padding: .9em 0;
+			}
+		}
+
+		nav {
+		float: none;
+		padding: 3em 0;
+		text-align: center;
+
+			ul.primary {
+
+				li {
+
+					ul.secondary {
+					margin-left: 2.5%;
+					text-align: center;
+				
+						li {
+
+							.tertiary {
+							display: none;
+							text-align: center;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#social {
+	top: auto;
+	bottom: 0;
+	right: auto;
+	text-align: center;
+	width: 100%;
+
+		a {
+		display: inline-block;
+		margin: 5px 3px;
+
+			img {
+			}
+		}
+	}
+
+	#main {
+	margin-top: 3em;
+	}
+
+	#work-container {
+	padding-bottom: 6em;
+	}
+}
+
+@media only screen and (max-width: 767px){
+    nav {
+
+			ul.primary {
+
+				li {
+
+					ul.secondary {
+					left: 2.5%;
+
+						li {
+						
+							.tertiary {
+							}
+						}
+					}
+				}
+			}
+		}
+
+		#main {
+	margin-top: 2em;
+	}
 }
